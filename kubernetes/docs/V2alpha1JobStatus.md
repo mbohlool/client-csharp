@@ -1,0 +1,14 @@
+# io.kubernetes.csharp.Model.V2alpha1JobStatus
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Active** | **int?** | Active is the number of actively running pods. | [optional] 
+**CompletionTime** | [**UnversionedTime**](UnversionedTime.md) | CompletionTime represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. | [optional] 
+**Conditions** | [**List&lt;V2alpha1JobCondition&gt;**](V2alpha1JobCondition.md) | Conditions represent the latest available observations of an object&#39;s current state. More info: http://kubernetes.io/docs/user-guide/jobs | [optional] 
+**Failed** | **int?** | Failed is the number of pods which reached Phase Failed. | [optional] 
+**StartTime** | [**UnversionedTime**](UnversionedTime.md) | StartTime represents time when the job was acknowledged by the Job Manager. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. | [optional] 
+**Succeeded** | **int?** | Succeeded is the number of pods which reached Phase Succeeded. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

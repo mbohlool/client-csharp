@@ -1,0 +1,140 @@
+# io.kubernetes.csharp.Api.AuthenticationV1beta1Api
+
+All URIs are relative to *https://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**CreateTokenReview**](AuthenticationV1beta1Api.md#createtokenreview) | **POST** /apis/authentication.k8s.io/v1beta1/tokenreviews | 
+[**GetAPIResources**](AuthenticationV1beta1Api.md#getapiresources) | **GET** /apis/authentication.k8s.io/v1beta1/ | 
+
+
+<a name="createtokenreview"></a>
+# **CreateTokenReview**
+> V1beta1TokenReview CreateTokenReview (V1beta1TokenReview body, string pretty = null)
+
+
+
+create a TokenReview
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using io.kubernetes.csharp.Api;
+using io.kubernetes.csharp.Client;
+using io.kubernetes.csharp.Model;
+
+namespace Example
+{
+    public class CreateTokenReviewExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: BearerToken
+            Configuration.Default.ApiKey.Add("authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("authorization", "Bearer");
+
+            var apiInstance = new AuthenticationV1beta1Api();
+            var body = new V1beta1TokenReview(); // V1beta1TokenReview | 
+            var pretty = pretty_example;  // string | If 'true', then the output is pretty printed. (optional) 
+
+            try
+            {
+                V1beta1TokenReview result = apiInstance.CreateTokenReview(body, pretty);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthenticationV1beta1Api.CreateTokenReview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1beta1TokenReview**](V1beta1TokenReview.md)|  | 
+ **pretty** | **string**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
+
+### Return type
+
+[**V1beta1TokenReview**](V1beta1TokenReview.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json, application/yaml, application/vnd.kubernetes.protobuf
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getapiresources"></a>
+# **GetAPIResources**
+> UnversionedAPIResourceList GetAPIResources ()
+
+
+
+get available resources
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using io.kubernetes.csharp.Api;
+using io.kubernetes.csharp.Client;
+using io.kubernetes.csharp.Model;
+
+namespace Example
+{
+    public class GetAPIResourcesExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: BearerToken
+            Configuration.Default.ApiKey.Add("authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("authorization", "Bearer");
+
+            var apiInstance = new AuthenticationV1beta1Api();
+
+            try
+            {
+                UnversionedAPIResourceList result = apiInstance.GetAPIResources();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthenticationV1beta1Api.GetAPIResources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UnversionedAPIResourceList**](UnversionedAPIResourceList.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml, application/vnd.kubernetes.protobuf
+ - **Accept**: application/json, application/yaml, application/vnd.kubernetes.protobuf
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
